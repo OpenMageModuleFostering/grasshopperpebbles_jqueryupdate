@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * GrasshopperPebbles extension 
+ *
+ * NOTICE OF LICENSE 
+ *
+ * This source file is subject to the License
+ * that is bundled with this package in the file GP-LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://grasshopperpebbles.com/gp-license.txt
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to support@grasshopperpebbles.com so we can send you a copy immediately.
+ * 
+ * @category    Grasshopperpebbles
+ * @package     Grasshopperpebbles_Jqueryupdate
+ * @license     http://grasshopperpebbles.com/gp-license.txt, http://devoutgeek.com/gp-license.txt
+ * @copyright   Copyright (c) 2014 Grasshopperpebbles, LLC. (http://grasshopperpebbles.com)
+ * @author      Les Green <support@grasshopperpebbles.com>
+ */	
+-->
+<config>
+    <modules>
+        <Grasshopperpebbles_Jqueryupdate>
+            <version>1.0.0</version>
+        </Grasshopperpebbles_Jqueryupdate>
+    </modules>
+    <adminhtml>
+    	<layout>
+            <updates>
+                <jqueryupdate>
+                    <file>grasshopperpebbles_jqueryupdate.xml</file>
+                </jqueryupdate>
+            </updates>
+        </layout>
+        <events>
+	        <controller_action_layout_generate_xml_before>
+	            <observers>
+	                <jqueryupdate>
+	                    <class>Grasshopperpebbles_Jqueryupdate_Model_Observer</class>
+	                    <method>addJqueryUI</method>
+	                </jqueryupdate>
+	            </observers>
+	        </controller_action_layout_generate_xml_before>
+	    </events>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <jqueryupdate>
+                                            <title>jQuery UI Themes</title>
+                                        </jqueryupdate>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <admin>
+		<routers>
+			<jqueryupdate>
+				<use>admin</use>
+				<args>
+		        	<module>Grasshopperpebbles_Jqueryupdate</module>
+					<frontName>jqueryupdate</frontName>
+				</args>
+			</jqueryupdate>
+		</routers>
+	</admin>
+    <frontend>
+        <routers>
+            <jqueryupdate>
+                <use>standard</use>
+                <args>
+                    <module>Grasshopperpebbles_Jqueryupdate</module>
+                    <frontName>jqueryupdate</frontName>
+                </args>
+            </jqueryupdate>
+        </routers>
+       <layout>
+            <updates>
+                <jqueryupdate>
+                    <file>grasshopperpebbles_jqueryupdate.xml</file>
+                </jqueryupdate>
+            </updates>
+        </layout>
+        <events>
+	        <controller_action_layout_generate_xml_before>
+	            <observers>
+	                <jqueryupdate>
+	                    <class>Grasshopperpebbles_Jqueryupdate_Model_Observer</class>
+	                    <method>addJqueryUI</method>
+	                </jqueryupdate>
+	            </observers>
+	        </controller_action_layout_generate_xml_before>
+	    </events>
+    </frontend>  
+    <global>
+    	<blocks>
+    		<jqueryupdate>
+                <class>Grasshopperpebbles_Jqueryupdate_Block</class>
+            </jqueryupdate>
+    	</blocks>
+        <helpers>
+            <jqueryupdate>
+                <class>Grasshopperpebbles_Jqueryupdate_Helper</class>
+            </jqueryupdate>
+        </helpers>
+        <models>
+		    <jqueryupdate_adminhtml>
+	             <class>Grasshopperpebbles_Jqueryupdate_Adminhtml_Model</class>
+	        </jqueryupdate_adminhtml>
+		</models>
+    </global>
+    <default>
+    	<jqueryupdate>
+    		<jqueryui_front_settings>
+    			<jquery_ui_front>0</jquery_ui_front>
+    			<jquery_ui_theme_front>ui-lightness</jquery_ui_theme_front>
+    		</jqueryui_front_settings>
+    		<jqueryui_back_settings>
+    			<jquery_ui_back>0</jquery_ui_back>
+    		</jqueryui_back_settings>
+    	</jqueryupdate>	
+    </default>
+</config>

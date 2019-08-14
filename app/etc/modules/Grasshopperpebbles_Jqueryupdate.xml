@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Grasshopperpebbles_Jqueryupdate>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Grasshopperpebbles_Jqueryupdate>
+    </modules>
+</config>

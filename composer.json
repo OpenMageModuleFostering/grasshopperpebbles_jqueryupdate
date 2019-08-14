@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Grasshopperpebbles_Jqueryupdate",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Statndardizing the use of jQuery and jQuery UI for front-end and back-end development",
+    "authors": [
+    {
+        "name": "Les Green",
+        "email": "lesgreen@grasshopperpebbles.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
