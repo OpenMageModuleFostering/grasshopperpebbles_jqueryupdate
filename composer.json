@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Grasshopperpebbles_Jqueryupdate",
+    "name": "openmage-module-fostering\/grasshopperpebbles_jqueryupdate",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Statndardizing the use of jQuery and jQuery UI for front-end and back-end development",
     "authors": [
